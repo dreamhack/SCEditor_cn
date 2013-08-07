@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<title>SCEditor Demo</title>
+		<link rel="stylesheet" href="./minified/themes/modern.min.css" type="text/css" media="all" />
+		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+		<script src="./minified/jquery.sceditor.bbcode.min.js"></script>
+		<style>
+			html {
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 13px;
+			}
+			form div {
+				padding: .5em;
+			}
+			code:before {
+				position: absolute;
+				content: 'Code:';
+				top: -1.35em;
+				left: 0;
+			}
+			code {
+				margin-top: 1.5em;
+				position: relative;
+				background: #eee;
+				border: 1px solid #aaa;
+				white-space: pre;
+				padding: .25em;
+				min-height: 1.25em;
+			}
+			code:before, code {
+				display: block;
+				text-align: left;
+			}
+		</style>
+		<script>
+    			$(function() {
+    
+   					$("textarea").sceditor({
+    				
+    					plugins: "bbcode",
+     					style: "/minified/themes/modern.min.css"
+    				});
+    	 });
+   		 </script>
+	</head>
+	<body>
+		<form action="" method="post">
+			<div>
+				<textarea name="bbcode_field" style="height:300px;width:600px;">[center][size=3][b]BBCode SCEditor[/b][/size][/center]
+				</textarea>
+			</div>	
+		</form>
+	</body>
+</html>
